@@ -1,0 +1,240 @@
+:root{
+    --bleuDeNuit : #050622 ;
+    --orange : #CE9E36 ;
+    --noir : black;
+    --blanc :white ;
+    --bleuclair : #344059 ;
+    --grisClair : #d7d3d3;
+    --couleurFooter : #04061beb ;
+    --couleurParagraphe : #ccc ;
+}
+body{
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    font-family: Verdana;
+    font-size: 14px;
+ }
+
+ /* -------------------------------HEADER------------------------------------------------------------ */
+header{
+    background-color: var(--blanc);
+
+}
+/* -------------------------------DESIGN DE LA BANIERE--------------------------------- */
+header .banner{
+    background-color: var(--bleuDeNuit);
+    color:var(--blanc) ;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .banner .bannerLeft{
+    display: flex;
+    float: left;
+    margin: 15px 40px 0 40px;
+
+}
+header .banner .bannerLeft .infos{
+    font-size: 10px;
+    margin: 10px;
+}
+header .banner .bannerLeft .infos i{
+    color: var(--orange);
+}
+header .banner .bannerRight{
+    display: flex;
+    margin: 0px 40px ;
+}
+header .banner .bannerRight ul{
+    display: flex;
+    float: left;
+}
+header .banner .bannerRight ul li{
+   list-style: none;
+   background-color: var(--bleuclair) ;
+   margin-left: 10px;
+   border-radius: 7px;
+   padding: 5px 10px;
+
+}
+header .banner .bannerRight ul li a{
+   color: var(--blanc);
+}
+/* ---------------------------DESIGN DU MENU ET LOGO----------------------------- */
+header .menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 10px 0;
+}
+header .menu .logo , header .menu .menuItems {
+    margin: 10px 40px 10px 40px ;
+
+}
+header .menu .menuItems ul  {
+    margin: 10px 40px ;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+
+
+}
+header .menu .menuItems ul li{
+    list-style-type: none;
+    padding: 8px;
+    margin: 0;
+
+
+    
+}
+header .menu .menuItems ul li a {
+    color: var(--bleuDeNuit);
+    font-size: 13px;
+    font-weight:bolder;
+    text-decoration: none;
+
+}
+header .menu .menuItems ul li a i{
+    color: var(--orange);
+    margin-left: 10px;
+
+}
+header .menu .menuItems ul li .active{
+    color: var(--orange);
+}
+/* STYLE DE L'IMAGE  */
+.image-inversee {
+    transform: scaleX(-1);
+  }
+main .permierImage {
+    position: relative; 
+    display: inline-block; 
+    width: 100%;
+}
+main .permierImage img {
+    width: 100%;
+    height: 400px;
+}
+.permierImage::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 1; 
+  }
+
+  /* style des slides */
+  main .permierImage .slides{
+
+  }
+  main .permierImage .slides .slide{
+
+  }
+
+  /* ABOUT US */
+main .about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+}
+main .about h3{
+    font-size: 20px;
+    color: var(--noir);
+}
+main .about .texteAbout{
+  font-size: 10px;
+  width: 40%;
+  color: var(--grisClair);
+}
+main .about .imageAbout{
+    margin-left: 100px;
+}
+
+/* css des barres de progression  */
+main .about .progressions .textePorgression{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    color: var(--noir);
+    font-weight: bold;
+}
+main .about .barProgression{
+    width: 100%;
+    background-color: #ccc;
+    border-radius: 10px;
+    height: 5px;
+    position: relative;
+}
+/* style de chaque progession avec sn pourcentage  */
+main .about .progressions .barProgression div{
+    height: 5px;
+    background-color: var(--orange); /* Couleur de la barre de progression */
+    border-radius: 10px;
+}
+main .about #progression1 {
+    width: 75%; 
+}
+main .about #progression2 {
+    width: 50%; 
+}
+main .about #progression3 {
+    width: 87%; 
+}
+main .about #progression4 {
+    width: 95%; 
+}
+#pourcentage1{
+    margin-right: 100px;
+}
+#pourcentage2{
+    margin-right: 200px;
+}
+#pourcentage3{
+    margin-right: 50px;
+}
+#pourcentage3{
+    margin-right: 45px;
+}
+
+/* stylisation du footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    width: 100%;
+    background-color: var(--couleurFooter);
+    color: var(--blanc);
+}
+footer .footerElements{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    width: 80%;
+
+
+}
+footer .footerElements .footerElement{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+footer .footerElements .footerElement .icon{
+    font-size: 25px;
+    color: var(--orange);
+
+}
+footer p {
+    font-size: 10px;
+    text-align: center;
+    color: var(--couleurParagraphe);
+}
